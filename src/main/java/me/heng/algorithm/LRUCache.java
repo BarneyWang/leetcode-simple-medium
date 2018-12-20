@@ -98,6 +98,7 @@ public class LRUCache {
         lruCacheTest.set(3, 3);
         lruCacheTest.set(4, 4);
         lruCacheTest.set(5, 5);
+        lruCacheTest.set(1 ,1);
         System.out.println("lruCacheTest.get(1):" + lruCacheTest.get(1));
         lruCacheTest.set(6, 6);
         System.out.println("lruCacheTest.get(2):" + lruCacheTest.get(2));
