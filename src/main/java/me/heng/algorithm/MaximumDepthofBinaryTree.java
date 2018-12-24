@@ -102,4 +102,13 @@ class TreeNode{
     public TreeNode(int val) {
         this.val = val;
     }
+
+    @Override
+    public String toString() {
+        return "TreeNode{" +
+                "val=" + val +
+                ", left=" + left +
+                ", right=" + right +
+                '}';
+    }
 }
