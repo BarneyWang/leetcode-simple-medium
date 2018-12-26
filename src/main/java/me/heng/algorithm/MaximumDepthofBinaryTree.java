@@ -10,6 +10,81 @@ import java.util.LinkedList;
 public class MaximumDepthofBinaryTree {
 
 
+    static int depthMinMumCur(TreeNode root){
+        if(root==null)
+            return 0;
+        if(root.left ==null&& root.right ==null)
+            return 1;
+        if(root.left == null && root.right !=null)
+            return depthMinMumCur(root.right)+1;
+        if(root.right == null&& root.left!=null)
+            return depthMinMumCur(root.left)+1;
+        return Math.min(depthMinMumCur(root.left), depth(root.right)) + 1;
+    }
+
+    static int dethMinmunDfsIteratively(TreeNode root){
+        int level =0;
+        LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
+        int cur = 1;
+        int next = 0;
+        queue.add(root);
+        while(!queue.isEmpty()){
+            TreeNode n = queue.poll();
+            cur--;
+            if(n.right==null){
+                 queue.push(n.right);
+                next ++;
+            }
+
+            if(n.left==null){
+                queue.push(n.left);
+                next ++;
+            }
+            if(cur ==0){
+                cur = next;
+                next = 0;
+                level++;
+                break;
+            }
+
+        }
+
+        return level;
+    }
+
+
+    static int depthDfs2(TreeNode root){
+        int level =0;
+        LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.add(root);
+        //current cursor
+        int curNum = 1;
+        //init
+        int nextNum = 0;
+        while(!queue.isEmpty()){
+            TreeNode n = queue.poll();
+            curNum--;
+            if(n.left!=null){
+                queue.push(n.left);
+                nextNum++;
+            }
+
+            if(n.right!=null){
+                queue.push(n.right);
+                nextNum++;
+            }
+
+            if(curNum == 0){
+                curNum = nextNum;
+                nextNum = 0;
+                level++;
+            }
+        }
+
+        return level;
+    }
+
+
     static int depthDfs(TreeNode root){
         int level = 0;
         LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
@@ -91,6 +166,8 @@ public class MaximumDepthofBinaryTree {
         t1.left = t3;
         t2.right = t4;
         System.out.println(depthDfs(root));
+        System.out.println(depthMinMumCur(root));
+        System.out.println(dethMinmunDfsIteratively(root));
     }
 
 }

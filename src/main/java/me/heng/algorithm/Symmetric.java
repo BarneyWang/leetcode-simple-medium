@@ -61,6 +61,30 @@ public class Symmetric {
     }
 
 
+    public static boolean isSymmetic(TreeNode root){
+        LinkedList<TreeNode> queue1 = new LinkedList<>();
+        LinkedList<TreeNode> queue2= new LinkedList<>();
+        queue1.push(root.left);
+        queue2.push(root.right);
+        boolean isSymmetric = true;
+        while(!queue1.isEmpty() && !queue2.isEmpty()){
+            TreeNode t1 = queue1.poll();
+            TreeNode t2 = queue2.poll();
+
+            if (t1 == null && t2 == null) continue;
+            if (t1 == null || t2 == null) return false;
+            if (t1.val != t2.val) return false;
+
+            queue1.push(t1.left);
+            queue1.push(t1.right);
+            queue2.push(t2.right);
+            queue2.push(t2.left);
+
+        }
+        return isSymmetric;
+    }
+
+
     public static void main(String[] args) {
         TreeNode root = new TreeNode(0);
         TreeNode t1 = new TreeNode(1);
@@ -68,10 +92,17 @@ public class Symmetric {
         root.right = t1;
         root.left = t2;
         TreeNode t3 = new TreeNode(2);
-        TreeNode t4 = new TreeNode(2);
+        TreeNode t4 = new TreeNode(3);
         t1.left = t3;
-        t2.right = t4;
-        System.out.println(isSymmetric(root));
+        t1.right = t4;
+        TreeNode t5 = new TreeNode(2);
+        TreeNode t6 = new TreeNode(3);
+        t2.left = t5;
+        t2.right = t6;
+
+
+//        System.out.println(isSymmetric(root));
+        System.out.println(isSymmetic(root));
 
     }
 

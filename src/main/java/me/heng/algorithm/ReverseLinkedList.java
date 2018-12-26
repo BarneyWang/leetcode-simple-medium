@@ -10,6 +10,23 @@ package me.heng.algorithm;
 public class ReverseLinkedList {
 
 
+    public static ListNode reverseListIteratively(ListNode head){
+        ListNode n = head;
+        ListNode pre =null;
+        while(n!=null){
+            ListNode temp = n.next;
+            n.next = pre;
+            pre = n;
+            n = temp;
+        }
+        // fix head
+        head = pre;
+        String s="";
+//        s.cha
+        return head;
+
+    }
+
     public static ListNode reverseList(ListNode head){
 
         if(head ==null || head.next == null)
@@ -20,6 +37,7 @@ public class ReverseLinkedList {
         head.next = null;
         return listNode;
     }
+
 
 
 
