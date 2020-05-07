@@ -20,7 +20,6 @@ public class KClosestTest {
             public int compare(Point o1, Point o2) {
                 int diff = 0;
                 diff = getDiss(o1, point) - getDiss(o2, point);
-                System.out.println(diff);
                 if(diff ==0){
                     diff = o1.x - o2.x;
                 }

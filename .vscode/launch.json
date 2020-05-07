@@ -1,0 +1,81 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - ReverseLinkedList",
+      "request": "launch",
+      "mainClass": "me.heng.algorithm.ReverseLinkedList",
+      "projectName": "me.heng"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - ReverseListNode",
+      "request": "launch",
+      "mainClass": "me.heng.algorithm.linknode.ReverseListNode",
+      "projectName": "me.heng"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - PreorderTraversal",
+      "request": "launch",
+      "mainClass": "me.heng.algorithm.treenodeexercise.PreorderTraversal",
+      "projectName": "me.heng"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - PreorderTraversal",
+      "request": "launch",
+      "mainClass": "me.heng.algorithm.treenode.PreorderTraversal",
+      "projectName": "me.heng"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - PreorderTraversal",
+      "request": "launch",
+      "mainClass": "me.heng.algorithm.TreeNode.PreorderTraversal",
+      "projectName": "me.heng"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - ReverseString",
+      "request": "launch",
+      "mainClass": "me.heng.algorithm.ReverseString",
+      "projectName": "me.heng"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - CalcutorData",
+      "request": "launch",
+      "mainClass": "me.heng.phone.CalcutorData",
+      "projectName": "me.heng"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - KClosestPoint",
+      "request": "launch",
+      "mainClass": "me.heng.algorithm.KClosestPoint",
+      "projectName": "me.heng"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - CoinChange",
+      "request": "launch",
+      "mainClass": "me.heng.algorithm.CoinChange",
+      "projectName": "me.heng"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - MergeTwoSortedArray",
+      "request": "launch",
+      "mainClass": "me.heng.algorithm.MergeTwoSortedArray",
+      "projectName": "me.heng"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - SubArray",
+      "request": "launch",
+      "mainClass": "me.heng.algorithm.SubArray",
+      "projectName": "me.heng"
+    }
+  ]
+}

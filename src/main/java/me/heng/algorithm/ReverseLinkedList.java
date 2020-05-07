@@ -3,17 +3,14 @@ package me.heng.algorithm;
 /**
  *
  *
- * AUTHOR: wangdi
- * DATE: 2018-12-23
- * TIME: 15:13
+ * AUTHOR: wangdi DATE: 2018-12-23 TIME: 15:13
  */
 public class ReverseLinkedList {
 
-
-    public static ListNode reverseListIteratively(ListNode head){
+    public static ListNode reverseListIteratively(ListNode head) {
         ListNode n = head;
-        ListNode pre =null;
-        while(n!=null){
+        ListNode pre = null;
+        while (n != null) {
             ListNode temp = n.next;
             n.next = pre;
             pre = n;
@@ -21,15 +18,14 @@ public class ReverseLinkedList {
         }
         // fix head
         head = pre;
-        String s="";
-//        s.cha
+        // s.cha
         return head;
 
     }
 
-    public static ListNode reverseList(ListNode head){
+    public static ListNode reverseList(ListNode head) {
 
-        if(head ==null || head.next == null)
+        if (head == null || head.next == null)
             return head;
         ListNode second = head.next;
         ListNode listNode = reverseList(second);
@@ -37,11 +33,6 @@ public class ReverseLinkedList {
         head.next = null;
         return listNode;
     }
-
-
-
-
-
 
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1);
@@ -53,25 +44,22 @@ public class ReverseLinkedList {
         l2.next = l3;
         l3.next = l4;
         l4.next = l5;
-//        ListNode listNode = reverseList(l1);
+        // ListNode listNode = reverseList(l1);
         ListNode listNode = reverseList(l1);
         System.out.println(listNode.toString());
     }
 
+    static class ListNode {
+        int i;
+        ListNode next;
 
-     static class ListNode {
-         int i;
-         ListNode next;
-         ListNode(int i){
-             this.i = i;
-         }
+        ListNode(int i) {
+            this.i = i;
+        }
 
-         @Override
-         public String toString() {
-             return "ListNode{" +
-                     "i=" + i +
-                     ", next=" + next +
-                     '}';
-         }
-     }
+        @Override
+        public String toString() {
+            return "ListNode{" + "i=" + i + ", next=" + next + '}';
+        }
+    }
 }
